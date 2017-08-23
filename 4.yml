@@ -1,0 +1,17 @@
+version: '3'
+services:
+  app:
+    image: jupyter/scipy-notebook
+    ports:
+      - "8888:8888"
+    user: root
+    volumes:
+      - "./input:/home/jovyan/work/input:ro"
+      - "./output:/home/jovyan/work/output"
+      - "./scripts:/home/jovyan/work/scripts"
+    environment:
+      - NB_UID=1001
+      - DATASET_FILENAME=NASA_Facilities.csv
+      - TEST_SIZE=0.2
+    command: ["python", "/home/jovyan/work/scripts/splitter.py"]
+

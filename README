@@ -1,0 +1,12 @@
+
+docker-compose : Define and run multi-container applications with Docker
+
+* docker-compose build : read default docker-compose.yml
+* docker-compose -f 1.yml up : specify alternative docker-compose file (Successfully tagged coffeewithdockercompose_app:latest)
+* docker-compose -f 2.yml up : specify alternative Dockerfile
+* docker-compose -f 3.yml up : notebook up + port mapping
+* docker-compose -f 4.yml rm : rm container
+* docker-compose -f 4.yml up : persistent volume
+* docker-compose -f 5.yml up static: start a specific container
+* docker-compose -f 5.yml up: link containers + random port
+

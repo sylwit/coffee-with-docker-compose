@@ -1,0 +1,17 @@
+version: '3'
+services:
+  app:
+    image: python:3.6
+    command: 'bash -c "curl http://site:8000/data/static.txt"'
+    links:
+      - "static:site"
+
+  static:
+    image: python:3.6
+    ports:
+      - "8000"
+    volumes:
+      - "./input:/data"
+    command: ["python", "-m",  "http.server"]
+
+
