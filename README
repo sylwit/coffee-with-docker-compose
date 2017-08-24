@@ -15,4 +15,4 @@ docker-compose : Define and run multi-container applications with Docker
 * docker-compose -f 8-2.yml up: external_link
 * PYTHON_VERSION=3.6 docker-compose -f 9.yml up: variable substitution + restart (trust the doc)
 * docker-compose -f 10.yml up --scale app=2 : start 2 containers
-* docker-compose -f 10.yml up -d : detach mode, need docker lgos to see notebook url
+* docker-compose -f 10.yml up -d : detach mode, need docker logs to see notebook url
