@@ -9,9 +9,12 @@ services:
       - "./input:/home/jovyan/work/input:ro"
       - "./output:/home/jovyan/work/output"
       - "./scripts:/home/jovyan/work/scripts"
+#    env_file:
+#      - .env
     environment:
       - NB_UID=1001
       - DATASET_FILENAME=NASA_Facilities.csv
       - TEST_SIZE=0.2
+#    entrypoint:
     command: ["python", "/home/jovyan/work/scripts/splitter.py"]
 

@@ -8,5 +8,11 @@ docker-compose : Define and run multi-container applications with Docker
 * docker-compose -f 4.yml rm : rm container
 * docker-compose -f 4.yml up : persistent volume
 * docker-compose -f 5.yml up static: start a specific container
-* docker-compose -f 5.yml up: link containers + random port
-
+* docker-compose -f 5.yml up: link containers + random port (expose vs port)
+* docker-compose -f 6.yml up: networks + name resolution
+* docker-compose -f 7.yml up: dns and extra_hosts + docker inspect to see DNS
+* docker-compose -f 8.yml up: container_name
+* docker-compose -f 8-2.yml up: external_link
+* PYTHON_VERSION=3.6 docker-compose -f 9.yml up: variable substitution + restart (trust the doc)
+* docker-compose -f 10.yml up --scale app=2 : start 2 containers
+* docker-compose -f 10.yml up -d : detach mode, need docker lgos to see notebook url

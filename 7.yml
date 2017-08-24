@@ -1,0 +1,12 @@
+version: '3'
+services:
+  app:
+    image: python:3.6
+    extra_hosts:
+      - "somehost:162.242.195.82"
+    dns:
+      - 8.8.8.8
+      - 9.9.9.9
+    dns_search:
+      - element.ai
+    command: 'bash -c "cat /etc/hosts && cat /etc/resolv.conf && sleep 600"'

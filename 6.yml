@@ -2,16 +2,19 @@ version: '3'
 services:
   app:
     image: python:3.6
-    command: 'bash -c "curl http://site:8000/data/static.txt"'
-    links:
-      - "static:site"
+    command: 'bash -c "curl http://static:8000/data/static.txt"'
+    networks:
+      - backend
 
   static:
     image: python:3.6
-#    ports:
-#      - "8000"
-    expose:
+    port:
       - "8000"
     volumes:
       - "./input:/data"
     command: ["python", "-m",  "http.server"]
+    networks:
+      - backend
+
+networks:
+  backend:

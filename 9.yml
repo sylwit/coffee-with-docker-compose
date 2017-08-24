@@ -1,0 +1,9 @@
+version: '3'
+services:
+  static:
+    image: python:${PYTHON_VERSION}
+    container_name: static
+    volumes:
+      - "./input:/data"
+    command: ["python", "-m",  "http.server"]
+    restart: always

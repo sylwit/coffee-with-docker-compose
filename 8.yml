@@ -1,0 +1,8 @@
+version: '3'
+services:
+  static:
+    image: python:3.6
+    container_name: static
+    volumes:
+      - "./input:/data"
+    command: ["python", "-m",  "http.server"]
